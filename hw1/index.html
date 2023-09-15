@@ -15,7 +15,7 @@
     <!-- 3. * При клике на элемент списка он должен быть удален. (по желанию) -->
 
     <div id="app">
-        <button @click="reverseText">{{message}}</button>
+        <button @click="reverseText">{{toggleReverseMessage}}</button>
 
         <div>
             <ol>
@@ -33,6 +33,7 @@
         new Vue({
             el: '#app',
             data: {
+                textReversed: false,
                 message: 'Перевернуть',
                 listElem: [
                     { text: "element 1" },
@@ -42,13 +43,18 @@
             },
             methods: {
                 reverseText() {
-                    this.message = this.message.split('').reverse().join('')
+                    this.textReversed = !this.textReversed
                 },
                 setItem() {
                     this.listElem.push({ text: "Новый элемент списка" })
                 },
                 removeItem(index) {
                     this.listElem.splice(index, 1)
+                }
+            },
+            computed: {
+                toggleReverseMessage() {
+                    return this.textReversed ? this.message.split('').reverse().join('') : this.message
                 }
             }
         })
