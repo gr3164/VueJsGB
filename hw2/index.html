@@ -44,10 +44,10 @@
         sortedList() {
           switch (this.sortParam) {
             case 'priceUp': {
-              return (this.products = this.products.sort((a, b) => a.price - b.price))
+              return (this.products.sort((a, b) => a.price - b.price))
             }
             case 'priceDown': {
-              return (this.products = this.products.sort((a, b) => b.price - a.price))
+              return (this.products.sort((a, b) => b.price - a.price))
             }
             default: return this.products;
           }
