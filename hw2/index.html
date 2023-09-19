@@ -13,8 +13,9 @@
     Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
 
   <div id="app">
-    <label>По Возрастанию<input name="radio" type="radio" @click="sortParam='priceUp'"></label><br>
-    <label>По Убыванию<input name="radio" type="radio" @click="sortParam='priceDown'"></label>
+    <button @click="sortParam='priceUp'">По Возрастанию</button>
+    <button @click="sortParam='priceDown'">По Убыванию</button>
+    <button @click="sortParam=''">Сбросить</button>
     <ul>
       <li v-for="(product, index) in sortedList" :key="index">
         <p>Name: {{product.name}}</p>
@@ -44,10 +45,10 @@
         sortedList() {
           switch (this.sortParam) {
             case 'priceUp': {
-              return (this.products.sort((a, b) => a.price - b.price))
+              return ([...this.products].sort((a, b) => a.price - b.price))
             }
             case 'priceDown': {
-              return (this.products.sort((a, b) => b.price - a.price))
+              return ([...this.products].sort((a, b) => b.price - a.price))
             }
             default: return this.products;
           }
