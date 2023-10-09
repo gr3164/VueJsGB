@@ -1,0 +1,345 @@
+// font-family: 'DM Serif Display', serif;
+// font-family: 'Jost', sans-serif;
+
+[class*="__container"] {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+
+    color: $primary2;
+}
+
+.wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100dvh;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        content: "";
+
+        background-image: url("@/assets/images/Line.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    main {
+        flex: 1 0;
+    }
+
+    footer {
+        flex: 0 0;
+    }
+}
+
+.block-text {
+    position: relative;
+    z-index: 2;
+
+    &__title {
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 125%; /* 62.5px */
+
+        margin: 0 0 20px 0;
+
+        letter-spacing: 1px;
+
+        color: $primary2;
+    }
+
+    &__title--h1 {
+        font-size: 65px;
+
+        margin: 0 0 30px 0;
+    }
+
+    &__text {
+        font-size: 22px;
+        line-height: 150%; /* 33px */
+
+        letter-spacing: 0.22px;
+
+        color: #4d5053;
+    }
+}
+
+.btn {
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 125%; /* 22.5px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+    padding: 25px 50px;
+
+    transition: color ease 0.2s;
+    letter-spacing: 0.36px;
+
+    color: $primary3;
+    border-radius: 18px;
+    background: $primary2;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+
+    gap: 10px;
+
+    &:hover {
+        color: $primary1;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+
+        gap: 50px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        font-size: 20px;
+        line-height: 125%; /* 25px */
+
+        transition: color 0.2s ease;
+
+        color: $primary2;
+
+        &:hover {
+            color: $primary1;
+        }
+    }
+}
+
+.card-news {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 382px;
+    max-width: 382px;
+    padding: 22px;
+    border: 1px solid #e7e7e7;
+    border-radius: 50px;
+    transition: background-color ease 0.2s;
+    &_horizontal {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        max-width: 100%;
+        padding-right: 56px;
+    }
+
+    &:hover {
+        background-color: #f4f0ec;
+        box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    }
+
+    &:hover .card-news__bottom .card-news__link svg circle {
+        transition: fill ease 0.2s;
+        fill: #fff;
+    }
+
+    &__img {
+        position: relative;
+        min-height: 280px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        overflow: hidden;
+        margin-bottom: 22px;
+        &_horizontal {
+            min-width: 50%;
+            min-height: 450px;
+            max-height: 560px;
+            border-radius: 50px;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__descr {
+        position: absolute;
+        display: inline-block;
+        bottom: 20px;
+        left: 20px;
+        color: #4d5053;
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px 8px 8px 0px;
+    }
+    &__content {
+    }
+
+    &__text {
+        color: #4d5053;
+        font-family: Jost;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
+
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        flex: 1 0;
+        color: $primary2;
+        font-family: DM Serif Display;
+        font-size: 25px;
+        line-height: 125%; /* 31.25px */
+        letter-spacing: 0.5px;
+        margin-bottom: 40px;
+
+        a {
+            color: inherit;
+            transition: color ease 0.2s;
+            &:hover {
+                color: $primary1;
+            }
+        }
+    }
+
+    &__bottom {
+        flex: 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__data {
+        color: #4d5053;
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+    }
+
+    &__link {
+        &:hover {
+            svg circle {
+                fill: darken(#fff, 10%) !important;
+            }
+        }
+    }
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    min-height: 360px;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &__text {
+        padding: 40px 80px;
+        border-radius: 37px 37px 0px 0px;
+        background-color: white;
+        text-align: center;
+    }
+
+    &__title {
+        color: $primary2;
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 125%; /* 62.5px */
+    }
+}
+
+.bread-crumbs {
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+    color: #4d5053;
+    font-family: Jost;
+    font-size: 22px;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    & a {
+        color: inherit;
+        transition: color 0.2s ease;
+        &:hover {
+            color: $primary1;
+        }
+    }
+
+    & li {
+        position: relative;
+    }
+
+    & li:not(:last-of-type)::after {
+        position: absolute;
+        content: "/";
+        top: 2px;
+        right: -15px;
+    }
+}
+
+.btn-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #292f36;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    padding: 9px 30px;
+    border-radius: 10px;
+    background-color: #f4f0ec;
+    transition: color 0.2s ease;
+
+    &_active {
+        background-color: #292f36;
+        color: $primary3;
+    }
+
+    &:hover {
+        color: $primary1;
+    }
+}
