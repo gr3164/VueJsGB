@@ -5,7 +5,8 @@
       <!-- <home-page/> -->
       <!-- <blog-page/> -->
       <!-- <blog-details/> -->
-      <our-project/>
+      <!-- <our-project/> -->
+      <project-details/>
       </main> 
       <footer-page/>
   </div>
@@ -15,7 +16,8 @@
 
 import FooterPage from './components/FooterPage.vue'
 import HeaderPages from './components/HeaderPages.vue'
-import OurProject from './pages/OurProject/OurProject.vue'
+import ProjectDetails from './pages/ProjectDetails/ProjectDetails.vue'
+// import OurProject from './pages/OurProject/OurProject.vue'
 // import BlogDetails from './pages/BlogDetails/BlogDetails.vue'
 // import BlogPage from './pages/Blog/BlogPage.vue'
 // import HomePage from './pages/HomePage/HomePage.vue'
@@ -27,7 +29,8 @@ export default {
   components: {
     HeaderPages,
     FooterPage,
-    OurProject,
+    ProjectDetails,
+    // OurProject,
     // HomePage,
     // BlogPage,
     // BlogDetails,
