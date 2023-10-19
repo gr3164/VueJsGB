@@ -1,9 +1,11 @@
 <template>
     <div>
+        <header-pages/>
         <hero-page/>
         <projects-page/>
         <counter-page/>
         <news-page/>
+        <footer-page/>
     </div>
 </template>
 
@@ -12,13 +14,17 @@ import HeroPage from './HeroPage.vue'
 import NewsPage from './NewsPage.vue'
 import ProjectsPage from './ProjectsPage.vue'
 import CounterPage from './CounterPage.vue'
+import HeaderPages from '@/components/HeaderPages.vue'
+import FooterPage from '@/components/FooterPage.vue'
 export default {
     name: 'HomePage',
      components: {
         HeroPage,
         ProjectsPage,
         CounterPage,
-        NewsPage
+        NewsPage,
+          HeaderPages,
+          FooterPage
     },
 
     data() {

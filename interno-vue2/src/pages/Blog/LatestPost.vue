@@ -21,13 +21,13 @@
                     classica.</p>
                 <div class="card-news__bottom">
                     <p class="card-news__data">26 December,2022 </p>
-                    <a class="card-news__link" href="#">
+                    <router-link to="/blog-details" class="card-news__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53"
                             viewBox="0 0 52 53" fill="none">
                             <circle cx="26" cy="26.2671" r="26" fill="#F4F0EC" />
                             <path d="M23.7714 32.9529L29.7142 26.2672L23.7714 19.5815" stroke="#292F36"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
 

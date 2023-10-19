@@ -7,11 +7,15 @@ import 'swiper/swiper-bundle.css'
 
 import headBg from '@/assets/images/blog-details/hed-bg.jpg'
 import slideImg from '@/assets/images/project-details/slide01.png'
+import FooterPage from '@/components/FooterPage.vue';
+import HeaderPages from '@/components/HeaderPages.vue';
 
     export default {
         components: {
             Swiper,
-            SwiperSlide 
+            SwiperSlide,
+                FooterPage,
+                HeaderPages 
         },
         data(){
             return{
@@ -39,6 +43,7 @@ import slideImg from '@/assets/images/project-details/slide01.png'
 
 <template>
     <div>
+        <header-pages/>
         <section class="project-details">
             <div class="heading">
                 <img :src="headBg" alt="img bg">
@@ -72,6 +77,7 @@ import slideImg from '@/assets/images/project-details/slide01.png'
                 <div class="slider-pd__dots"></div>
             </div>
         </section>
+        <footer-page/>
     </div>
 </template>
 

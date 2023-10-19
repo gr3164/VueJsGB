@@ -11,6 +11,7 @@
     "core-js": "^3.8.3",
     "swiper-vue2": "^1.0.10",
     "vue": "^2.6.14",
+    "vue-router": "^2.8.1",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

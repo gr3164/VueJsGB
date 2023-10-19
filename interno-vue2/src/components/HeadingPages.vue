@@ -4,8 +4,8 @@
         <div class="heading__text">
             <h2 class="heading__title">Articles & News</h2>
             <ul class="bread-crumbs">
-                <li><a href="#">Home</a> </li>
-                <li><a href="#">{{ namePage }}</a> </li>
+                <li><router-link to="/" >Home</router-link> </li>
+                <li><router-link :to=namePage.toLowerCase() >{{ namePage }}</router-link> </li>
             </ul>
         </div>
     </section>

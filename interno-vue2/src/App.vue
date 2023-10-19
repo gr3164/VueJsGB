@@ -1,39 +1,23 @@
 <template>
   <div id="app" class="wrapper">
-      <header-pages/>
       <main class="main">
-      <!-- <home-page/> -->
-      <!-- <blog-page/> -->
-      <!-- <blog-details/> -->
-      <!-- <our-project/> -->
-      <project-details/>
+        <router-view />
       </main> 
-      <footer-page/>
   </div>
 </template>
 
 <script>
 
-import FooterPage from './components/FooterPage.vue'
-import HeaderPages from './components/HeaderPages.vue'
-import ProjectDetails from './pages/ProjectDetails/ProjectDetails.vue'
-// import OurProject from './pages/OurProject/OurProject.vue'
-// import BlogDetails from './pages/BlogDetails/BlogDetails.vue'
-// import BlogPage from './pages/Blog/BlogPage.vue'
-// import HomePage from './pages/HomePage/HomePage.vue'
-
-
-
 export default {
   name: 'App',
+  notFound: '',
   components: {
-    HeaderPages,
-    FooterPage,
-    ProjectDetails,
-    // OurProject,
-    // HomePage,
-    // BlogPage,
-    // BlogDetails,
+
+  },
+  created() {
+    // this.$router.push({name: 'home'})
+    this.$router.push({path: this.notFound})
+    
   }
 }
 </script>
