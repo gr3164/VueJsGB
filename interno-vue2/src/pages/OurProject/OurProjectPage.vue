@@ -32,7 +32,7 @@ import img04 from "@/assets/images/our-project/04.jpg"
                     {id: 7, img: img03, title: 'Modern Kitchan', category: 'Decor / Artchitecture', filterCat:'Kitchan'},
                     {id: 8, img: img04, title: 'Modern Kitchan', category: 'Decor / Artchitecture', filterCat:'Kitchan'},
                 ],
-                cuerrentCat: ''
+                cuerrentCat: '',
             }
         },
         mounted(){

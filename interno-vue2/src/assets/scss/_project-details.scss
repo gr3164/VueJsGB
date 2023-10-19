@@ -1,0 +1,40 @@
+.project-details {
+}
+.heading {
+}
+.project-details__container {
+}
+.project-details__content {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    max-width: 658px;
+    margin: 0 auto;
+}
+.project-details__title {
+    color: $primary2;
+    font-family: DM Serif Display;
+    font-size: 50px;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+}
+.project-details__text {
+    color: #4D5053;
+    font-family: Jost;
+    font-size: 22px;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+
+    &:not(:last-of-type){
+        margin-bottom: 50px;
+    }
+}
+.project-details__slider {
+
+}
+.slider-pd {
+    
+}
+.slider-pd__slide {
+}
+.slider-pd__dots {
+}

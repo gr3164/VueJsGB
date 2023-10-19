@@ -1,5 +1,6 @@
 <template>
     <div>
+        <header-pages/>
         <div class="heading">
             <img :src="headBg" alt="img bg">
         </div>
@@ -69,6 +70,7 @@
                     </div>
                 </div>
         </div>
+        <footer-page/>
     </div>
     
 </template>
@@ -78,7 +80,10 @@ import detailsImg01 from '@/assets/images/blog-details/01.jpg'
 import detailsImg02 from '@/assets/images/blog-details/01.jpg'
 import iconDetails from '@/assets/images/blog-details/icon.svg'
 import headBg from '@/assets/images/blog-details/hed-bg.jpg'
+import FooterPage from '@/components/FooterPage.vue'
+import HeaderPages from '@/components/HeaderPages.vue'
 export default {
+  components: { FooterPage, HeaderPages },
 
     name: 'BlogDetails',
     

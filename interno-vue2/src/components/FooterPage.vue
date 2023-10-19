@@ -14,9 +14,9 @@
                 <h3 class="footer__title">Pages</h3>
                 <nav class=" footer__menu menu">
                     <ul class="footer__menu-list menu__list">
-                        <li class="menu__item"><a href="#" class="menu__link">Home </a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Project</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+                        <li class="menu__item"><router-link to="/" class="menu__link">Home </router-link></li>
+                        <li class="menu__item"><router-link to="/project" class="menu__link">Project</router-link></li>
+                        <li class="menu__item"><router-link to="/blog" class="menu__link">Blog</router-link></li>
                     </ul>
                 </nav>
             </div>
